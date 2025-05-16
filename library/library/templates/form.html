@@ -1,0 +1,28 @@
+<form action="" method="POST">
+        {% csrf_token %}
+        <h1>BOOK DETAILS</h1>
+        <label for="">NAME</label>
+        <input type="text" name="Bname" value="{{data.name}}" id="">
+        <br><br>
+        <label for="">AUTHOR</label>
+        <input type="text" name="author" value="{{data.author}}" id="">
+        <br><br>
+        <label for="">iSBN NUMBER</label>
+        <input type="number" name="num" value="{{data.isbn_number}}" id="">
+        <br>
+        <br>
+        <label for="">GENERE</label>
+        <input type="text" name="genere" value="{{data.genre}}" id="">
+        <br><br>
+        <label for="">PRIZE</label>
+        <input type="number" name="prize" value="{{data.prize}}" id="">
+        <br><br>
+
+        {% if var %}
+
+        <button type="submit">CREATE</button>
+        {% else %}
+        <button type="submit">UPDATE</button>
+        
+        {% endif %}
+    </form>

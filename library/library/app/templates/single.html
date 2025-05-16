@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is single details page</h1>
+   <p>NAME  {{data.name}}</p>
+   <p>author  {{data.author}}</p>
+   <p>ISBN  {{data.isbn_number}}</p>
+   <p>GENRE  {{data.genre}}</p>
+   <p>PRIZE  {{data.prize}}</p>
+   <!-- {{data.id}} -->
+   <button type="submit"><a href="{% url 'update' data.id %}">EDIT</a></button>
+   <a href="{% url 'drop' data.id %}">DELETE</a>
+
+</body>
+</html>
